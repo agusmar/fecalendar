@@ -10,46 +10,36 @@
   <body>
 
     <!-- Header -->
-    <header class="text-gray-700 body-font">
+    <header class="text-gray-700 body-font w-screen">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
             <img src="img/Fec_with_Shadow.png" alt=""fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 rounded-full" viewBox="0 0 24 24">
             <span class="ml-3 text-xl">FRONTENDCAFE</span>
           </a>
           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a class="mr-5 hover:text-gray-900">First Link</a> 
-            <a class="mr-5 hover:text-gray-900">Second Link</a>
-            <a class="mr-5 hover:text-gray-900">Third Link</a>
-            <a class="mr-5 hover:text-gray-900">Fourth Link</a>
+            <a href="#discord"  class="mr-5 hover:text-gray-900">Discord</a>
+            <a href="#events" class="mr-5 hover:text-gray-900">Proximos eventos</a>
           </nav>
-          <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">Button
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </button>
         </div>
     </header>
 
     <!-- Big picture -->
-    <section class="bg-cover text-gray-700 body-font" style="background-image: url('./img/bg.png')">
+    <section class="bg-cover text-gray-700 body-font w-screen" style="background-image: url('./img/bg.png')">
       <div class="container mx-auto flex px-5 py-16 items-center justify-center flex-col">
         <img class="lg:w-1/6 md:w-2/6 w-3/6 mb-10 object-cover object-center rounded" alt="hero" src="img/Fec_with_Shadow.png">
         <div class="text-center lg:w-2/3 w-full">
           <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">FrontEndCafé</h1>
           <p class="mb-8 leading-relaxed text-gray-300">Comunidad tech online.</p>
-          <div class="flex justify-center">
-            <button class="inline-flex text-white bg-teal-500 border-0 py-2 px-6 focus:outline-none hover:bg-teal-600 rounded text-lg">¿Qué es esto?</button>
-            <button class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg">¡Llevame a Discord! </button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- About -->
-    <section class="text-gray-700 body-font">
-      <div class="flex bg-cover bg-scroll flex px-5 py-16 items-center justify-center" style="background-image: url('./img/bg-discord.png')">
-        <iframe src="https://discordapp.com/widget?id=594363964499165194&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-        <div class="w-1/4 px-16">
+    <section id="discord"  class="text-gray-700 body-font w-screen">
+      <div class="flex bg-cover bg-fixed px-5 py-16 items-center justify-center flex-wrap" style="background-image: url('./img/bg-discord.png')">
+        <iframe class="lg:w-1/4 lg:min-w-0 sm:min-w-full sm:px-16" src="https://discordapp.com/widget?id=594363964499165194&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        <div class="w-1/3 px-16 lg:min-w-0 sm:min-w-full sm:py-16">
           <h1 class="text-white text-3xl">¡Somos una comunidad abierta de <span class="text-green-500">programación!</span></h1>
           <p class="text-gray-200">Aprender a programar es difícil, ¿no?
             Utilizamos este espacio en Discord para aprender en compañía, colaborar en proyectos abiertos y conectar con mentores voluntarios.</p>
@@ -58,7 +48,7 @@
     </section>
 
     <!-- Events -->
-    <section class="text-gray-700 body-font">
+    <section id="events" class="text-gray-700 body-font w-screen">
       <div class="container px-5 py-16 mx-auto">
 
         <h1 class="text-3xl pb-12 text-green-500">Próximos eventos</h1>
@@ -140,7 +130,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="text-gray-700 body-font w-screen bg-gray-900">
+    <footer class="text-gray-700 body-font w-screen bg-gray-900 w-screen">
       <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col items-center">
         <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-400">
           <img class="w-6" alt="hero" src="img/white-logo.png">
