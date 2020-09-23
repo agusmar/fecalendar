@@ -8,10 +8,9 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    fontFamily: {
-      sans: ['Inter', 'sans-serif'],
-      serif: ['Noto Serif', 'serif'],
-    },
+    // fontFamily: {
+    //   sans: ['Inter', 'sans-serif'],
+    // },
   },
   variants: {},
   plugins: [],
