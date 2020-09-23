@@ -15,27 +15,17 @@ const EventPreview: React.FC<EventPreviewProps> = ({ event }) => {
         />
         <div className="flex-grow p-4">
           <div className="w-full flex justify-between">
-            <h2 className="tracking-widest text-xs title-font font-medium text-teal-500 mb-1 py-2">
+            <h2 className="tracking-widest text-xs title-font font-medium text-green-500 mb-1 py-2">
               {event.category.name}
             </h2>
           </div>
-          <h1 className="title-font text-xl font-medium text-gray-900 mb-3">
+          <h1 className="title-font text-xl font-medium text-gray-900">
             {event.title}
           </h1>
-          <p className="leading-relaxed mb-5">{event.description}</p>
-          <a className="inline-flex items-center">
-            <img
-              alt="blog"
-              src="https://pbs.twimg.com/profile_images/1290848855706271744/cBfu3B3__400x400.jpg"
-              className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
-            />
-            <span className="flex-grow flex flex-col pl-3">
-              <span className="title-font font-medium text-gray-900">Agus</span>
-              <span className="title-font font-light text-gray-500">
-                {event.date}
-              </span>
-            </span>
-          </a>
+          <p className="title-font font-light text-gray-500 mb-3">
+            {event.date}
+          </p>
+          <p className="mb-5">{event.description}</p>
         </div>
       </div>
     </div>
