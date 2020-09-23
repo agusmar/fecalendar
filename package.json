@@ -8,6 +8,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "@sanity/block-content-to-react": "^2.0.7",
+    "@sanity/client": "^1.150.7",
+    "@sanity/image-url": "^0.140.19",
+    "date-fns": "^2.16.1",
     "next": "^9.5.4-canary.20",
     "react": "16.13.1",
     "react-dom": "16.13.1"

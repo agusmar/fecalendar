@@ -1,5 +1,6 @@
 export interface Event {
   title: string;
+  slug: string;
   category: {
     name: string;
   };
