@@ -2,12 +2,24 @@ import { format, isBefore } from 'date-fns';
 import BlockContent from '@sanity/block-content-to-react';
 import { Event } from '../../lib/types';
 import { imageBuilder } from '../../lib/sanity';
+import AddToCalendar from 'react-add-to-calendar';
 
 interface EventPreviewProps {
   event: Event;
 }
 
 const EventPreview: React.FC<EventPreviewProps> = ({ event }) => {
+  const endDate = new Date(event.date);
+  endDate.setHours(endDate.getHours() + 1);
+  console.log(event.description);
+  const calendar = {
+    title: `${event.title} - FrontEndCafe`,
+    description: event.description,
+    location: 'Discord',
+    startTime: new Date(event.date),
+    endTime: endDate,
+  };
+
   return (
     <div className="py-8 px-4 lg:w-1/3">
       <div
@@ -35,6 +47,13 @@ const EventPreview: React.FC<EventPreviewProps> = ({ event }) => {
           <div className="mb-5">
             <BlockContent blocks={event.description} />
           </div>
+          {isBefore(new Date(), new Date(event.date)) && (
+            <AddToCalendar
+              event={calendar}
+              buttonLabel="Agregar a mi calendario"
+              displayItemIcons={false}
+            />
+          )}
         </div>
       </div>
     </div>
