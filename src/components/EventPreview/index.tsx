@@ -11,10 +11,21 @@ interface EventPreviewProps {
 const EventPreview: React.FC<EventPreviewProps> = ({ event }) => {
   const endDate = new Date(event.date);
   endDate.setHours(endDate.getHours() + 1);
-  console.log(event.description);
+
+  function toPlainText(blocks) {
+    return blocks
+      .map((block) => {
+        if (block._type !== 'block' || !block.children) {
+          return '';
+        }
+        return block.children.map((child) => child.text).join('');
+      })
+      .join('\n\n');
+  }
+
   const calendar = {
     title: `${event.title} - FrontEndCafe`,
-    description: event.description,
+    description: toPlainText(event.description),
     location: 'Discord',
     startTime: new Date(event.date),
     endTime: endDate,

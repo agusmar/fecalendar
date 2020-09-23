@@ -8,8 +8,8 @@ const HomeHero: React.FC = () => {
           <div className="flex bg-cover py-12 items-center justify-between flex-wrap container mx-auto">
             <div className="max-w-2xl lg:min-w-0 sm:min-w-full md:py-16 py-10 text-shadow">
               <h1 className="text-white text-3xl mb-5">
-                ¡Welcome to{' '}
-                <span className="text-green-500">FrontEndCafé!</span>!
+                ¡Welcome to <span className="text-green-500">FrontEndCafé</span>
+                !
               </h1>
               <p className="text-gray-200 text-lg leading-relaxed">
                 Aprender a programar puede ser difícil, entonces creamos un
