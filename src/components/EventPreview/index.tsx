@@ -1,4 +1,4 @@
-import { format } from 'date-fns';
+import { format, isBefore } from 'date-fns';
 import BlockContent from '@sanity/block-content-to-react';
 import { Event } from '../../lib/types';
 import { imageBuilder } from '../../lib/sanity';
@@ -10,7 +10,11 @@ interface EventPreviewProps {
 const EventPreview: React.FC<EventPreviewProps> = ({ event }) => {
   return (
     <div className="py-8 px-4 lg:w-1/3">
-      <div className="h-full flex items-start rounded overflow-hidden shadow-lg flex-col">
+      <div
+        className={`h-full flex items-start rounded overflow-hidden shadow-lg flex-col ${
+          isBefore(new Date(event.date), new Date()) && 'opacity-50'
+        }`}
+      >
         <img
           className="w-full"
           src={imageBuilder.image(event.cover.src).width(450).url()}
