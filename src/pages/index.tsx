@@ -4,6 +4,7 @@ import { getAllEvents } from '../lib/api';
 import Layout from '../components/Layout';
 import HomeHero from '../components/HomeHero';
 import EventList from '../components/EventList';
+import TwitterFeed from '../components/TwitterFeed';
 
 interface HomePageProps {
   events: Event[];
@@ -15,6 +16,7 @@ const HomePage: React.FC<HomePageProps> = ({ events, preview }) => {
     <Layout>
       <HomeHero />
       <EventList events={events} />
+      <TwitterFeed />
     </Layout>
   );
 };
