@@ -1,6 +1,10 @@
-const Header: React.FC = () => {
+interface HeaderProps {
+  preview: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({ preview }) => {
   return (
-    <header className="text-gray-700 body-font">
+    <header className={`text-gray-700 body-font ${preview ? 'pt-10' : ''}`}>
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a className="flex title-font items-center text-gray-900 mb-4 md:mb-0">
           <img
@@ -8,19 +12,20 @@ const Header: React.FC = () => {
             className="w-12 h-12 text-white p-2 rounded-full"
             alt="FRONTENDCAFE"
           />
-          <span className="ml-3 text-xl text-gray-600 font-semibold">
+          <span className="ml-1 text-xl text-gray-600 font-semibold">
             FRONTEND
           </span>
           <span className="text-xl text-gray-600 font-normal">CAFE</span>
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <a href="#events" className="mr-5 hover:text-gray-900">
+          <a href="#events" className="mr-5 text-gray-600 hover:text-gray-800">
             Eventos
           </a>
 
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start items-center">
             <a
               target="_blank"
+              rel="noreferrer"
               className="ml-3 text-gray-500"
               href="https://twitter.com/FrontEndCafe"
             >
@@ -37,6 +42,7 @@ const Header: React.FC = () => {
             </a>
             <a
               target="_blank"
+              rel="noreferrer"
               className="ml-3 text-gray-500"
               href="https://www.instagram.com/frontendcafe_"
             >
@@ -55,6 +61,7 @@ const Header: React.FC = () => {
             </a>
             <a
               target="_blank"
+              rel="noreferrer"
               className="ml-3 text-gray-500"
               href="https://www.linkedin.com/company/frontendcafe"
             >

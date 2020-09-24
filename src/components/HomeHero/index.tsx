@@ -8,7 +8,7 @@ const HomeHero: React.FC = () => {
           <div className="flex bg-cover py-12 items-center justify-between flex-wrap container mx-auto">
             <div className="max-w-xl lg:min-w-0 sm:min-w-full md:py-16 py-10 text-shadow">
               <img
-                src="/fec-new.png"
+                src="/fec-new.svg"
                 className="pb-2 w-10/12"
                 alt="FRONTENDCAFE"
               />

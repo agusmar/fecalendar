@@ -1,8 +1,13 @@
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
+import PreviewBanner from '../PreviewBanner';
 
-const Layout: React.FC = ({ children }) => {
+interface LayoutProps {
+  preview: boolean;
+}
+
+const Layout: React.FC<LayoutProps> = ({ preview, children }) => {
   return (
     <>
       <Head>
@@ -10,7 +15,8 @@ const Layout: React.FC = ({ children }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="antialiased">
-        <Header />
+        {preview && <PreviewBanner />}
+        <Header preview={preview} />
         {children}
         <Footer />
       </div>
