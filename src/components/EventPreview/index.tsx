@@ -61,7 +61,7 @@ const EventPreview: React.FC<EventPreviewProps> = ({ event }) => {
           {isBefore(new Date(), new Date(event.date)) && (
             <AddToCalendar
               event={calendar}
-              buttonLabel="Agregar a mi calendario"
+              buttonLabel="Añadir a mi calendario"
               displayItemIcons={false}
             />
           )}
