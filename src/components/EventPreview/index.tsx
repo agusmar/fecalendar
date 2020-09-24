@@ -7,9 +7,10 @@ import styles from './styles.module.css';
 
 interface EventPreviewProps {
   event: Event;
+  past?: boolean;
 }
 
-const EventPreview: React.FC<EventPreviewProps> = ({ event }) => {
+const EventPreview: React.FC<EventPreviewProps> = ({ event, past = false }) => {
   const endDate = new Date(event.date);
   endDate.setHours(endDate.getHours() + 1);
 
@@ -35,14 +36,14 @@ const EventPreview: React.FC<EventPreviewProps> = ({ event }) => {
   return (
     <div className="py-8 px-4 lg:w-1/3">
       <div
-        className={`h-full flex items-start rounded overflow-hidden shadow-lg flex-col ${
-          isBefore(new Date(event.date), new Date()) && 'opacity-50'
-        }`}
+        className="h-full flex items-start rounded overflow-hidden shadow-lg flex-col"
+        style={{ opacity: past ? '.66' : 1 }}
       >
         <img
           className="w-full"
           src={imageBuilder.image(event.cover.src).width(450).url()}
           alt={event.cover.alt || event.title}
+          style={{ filter: past ? 'grayscale(100%)' : 'none' }}
         />
         <div className="flex-grow p-4 flex flex-col">
           <div className="w-full flex justify-between">

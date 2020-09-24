@@ -12,7 +12,7 @@ const Header: React.FC<HeaderProps> = ({ preview }) => {
             className="w-12 h-12 text-white p-2 rounded-full"
             alt="FRONTENDCAFE"
           />
-          <span className="ml-3 text-xl text-gray-600 font-semibold">
+          <span className="ml-1 text-xl text-gray-600 font-semibold">
             FRONTEND
           </span>
           <span className="text-xl text-gray-600 font-normal">CAFE</span>
