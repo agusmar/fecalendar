@@ -1,6 +1,10 @@
-const Header: React.FC = () => {
+interface HeaderProps {
+  preview: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({ preview }) => {
   return (
-    <header className="text-gray-700 body-font">
+    <header className={`text-gray-700 body-font ${preview ? 'pt-10' : ''}`}>
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a className="flex title-font items-center text-gray-900 mb-4 md:mb-0">
           <img

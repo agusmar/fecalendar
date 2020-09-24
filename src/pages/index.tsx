@@ -12,7 +12,7 @@ interface HomePageProps {
 
 const HomePage: React.FC<HomePageProps> = ({ events, preview }) => {
   return (
-    <Layout>
+    <Layout preview={preview}>
       <HomeHero />
       <EventList events={events} />
     </Layout>
