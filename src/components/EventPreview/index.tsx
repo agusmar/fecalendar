@@ -1,4 +1,4 @@
-import { format, isBefore } from 'date-fns';
+import { format } from 'date-fns';
 import AddToCalendar from 'react-add-to-calendar';
 import BlockContent from '@sanity/block-content-to-react';
 import { Event } from '../../lib/types';
@@ -60,7 +60,7 @@ const EventPreview: React.FC<EventPreviewProps> = ({ event, past = false }) => {
           <div className={`mb-5 ${styles.description}`}>
             <BlockContent blocks={event.description} />
           </div>
-          {isBefore(new Date(), new Date(event.date)) && (
+          {!past && (
             <div className="mt-auto mb-2 pt-4">
               <AddToCalendar
                 event={calendar}
