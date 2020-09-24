@@ -11,6 +11,7 @@ const Footer: React.FC = () => {
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start items-center">
           <a
             target="_blank"
+            rel="noreferrer"
             className="ml-3 text-gray-500"
             href="https://twitter.com/FrontEndCafe"
           >
@@ -27,6 +28,7 @@ const Footer: React.FC = () => {
           </a>
           <a
             target="_blank"
+            rel="noreferrer"
             className="ml-3 text-gray-500"
             href="https://www.instagram.com/frontendcafe_"
           >
@@ -45,6 +47,7 @@ const Footer: React.FC = () => {
           </a>
           <a
             target="_blank"
+            rel="noreferrer"
             className="ml-3 text-gray-500"
             href="https://www.linkedin.com/company/frontendcafe"
           >
