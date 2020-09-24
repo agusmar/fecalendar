@@ -18,13 +18,14 @@ const Header: React.FC<HeaderProps> = ({ preview }) => {
           <span className="text-xl text-gray-600 font-normal">CAFE</span>
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <a href="#events" className="mr-5 hover:text-gray-900">
+          <a href="#events" className="mr-5 text-gray-600 hover:text-gray-800">
             Eventos
           </a>
 
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start items-center">
             <a
               target="_blank"
+              rel="noreferrer"
               className="ml-3 text-gray-500"
               href="https://twitter.com/FrontEndCafe"
             >
@@ -41,6 +42,7 @@ const Header: React.FC<HeaderProps> = ({ preview }) => {
             </a>
             <a
               target="_blank"
+              rel="noreferrer"
               className="ml-3 text-gray-500"
               href="https://www.instagram.com/frontendcafe_"
             >
@@ -59,6 +61,7 @@ const Header: React.FC<HeaderProps> = ({ preview }) => {
             </a>
             <a
               target="_blank"
+              rel="noreferrer"
               className="ml-3 text-gray-500"
               href="https://www.linkedin.com/company/frontendcafe"
             >
