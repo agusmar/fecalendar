@@ -16,7 +16,7 @@ const pastEvents = (events: Event[]) =>
 
 const EventList: React.FC<EventListProps> = ({ events }) => {
   return (
-    <section id="events" className="text-gray-700 body-font">
+    <section id="events" className="text-gray-700 body-font relative pb-64">
       <div className="container px-5 py-16 mx-auto">
         <h1 className="text-3xl pb-12 text-green-500">Próximos Eventos</h1>
         <div className="flex flex-wrap -mx-4 -my-8">
@@ -33,8 +33,25 @@ const EventList: React.FC<EventListProps> = ({ events }) => {
           ))}
         </div>
       </div>
+      <Divider />
     </section>
   );
 };
 
+const Divider: React.FC = () => {
+  return (
+    <svg
+      className="divider"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="-300 0 950 270"
+    >
+      <path
+        d="M-314,267 C105,364 400,100 812,279"
+        stroke="#38b2ac"
+        strokeWidth="120"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+};
 export default EventList;

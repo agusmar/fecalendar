@@ -11,3 +11,8 @@ export interface Event {
   date: string;
   description: string;
 }
+
+export interface Tweets {
+  id: string;
+  text: string;
+}
