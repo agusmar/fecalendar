@@ -1,7 +1,19 @@
-const TwitterCard: React.FC = () => {
+import { TwitterTweetEmbed } from 'react-twitter-embed';
+
+interface TwitterCardProps {
+  id: string;
+}
+
+const TwitterCard: React.FC<TwitterCardProps> = ({ id }) => {
   return (
-    <div>
-      <h1>Card</h1>
+    <div className="w-full">
+      <TwitterTweetEmbed
+        tweetId={id}
+        options={{
+          conversation: 'none',
+          width: '500',
+        }}
+      />
     </div>
   );
 };

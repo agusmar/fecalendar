@@ -21,6 +21,12 @@ const Header: React.FC<HeaderProps> = ({ preview }) => {
           <a href="#events" className="mr-5 text-gray-600 hover:text-gray-800">
             Eventos
           </a>
+          <a
+            href="#comunidad"
+            className="mr-5 text-gray-600 hover:text-gray-800"
+          >
+            Comunidad FEC
+          </a>
 
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start items-center">
             <a

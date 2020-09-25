@@ -1,5 +1,5 @@
-export async function getRecentTweets() {
-  const params = 'query=frontendcafe&expansions=in_reply_to_user_id';
+export async function getRecentTweets(keyword) {
+  const params = `query=from:${keyword}&max_results=11`;
   const res = await fetch(
     `https://api.twitter.com/2/tweets/search/recent?${params}`,
     {

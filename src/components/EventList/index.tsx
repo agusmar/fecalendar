@@ -47,7 +47,7 @@ const Divider: React.FC = () => {
     >
       <path
         d="M-314,267 C105,364 400,100 812,279"
-        stroke="#48bb78"
+        stroke="#38b2ac"
         strokeWidth="120"
         strokeLinecap="round"
       />
