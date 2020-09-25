@@ -5,7 +5,7 @@ export async function getRecentTweets(keyword) {
     {
       method: 'GET',
       headers: {
-        authorization: `Bearer ${process.env.BEARER_TOKEN}`,
+        authorization: `Bearer ${process.env.TWITTER_API_TOKEN}`,
       },
     },
   );
