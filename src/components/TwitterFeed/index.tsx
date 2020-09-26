@@ -1,25 +1,25 @@
-import { Tweets } from '../../lib/types';
+import { Tweet } from '../../lib/types';
 import TwitterCard from '../TwitterCard';
 
 interface TwitterFeedProps {
-  tweets: Tweets[];
+  tweets: Tweet[];
 }
 
-const TwitterFeed: React.FC<TwitterFeedProps> = ({ tweets }) => {
-  const chunk = (array, size) => {
-    const chunked_arr = [];
-    let index = 0;
-    while (index < array.length) {
-      chunked_arr.push(array.slice(index, size + index));
-      index += size;
-    }
-    return chunked_arr;
-  };
+const chunk = (array: Tweet[], size: number) => {
+  const chunked_arr = [];
+  let index = 0;
+  while (index < array.length) {
+    chunked_arr.push(array.slice(index, size + index));
+    index += size;
+  }
+  return chunked_arr;
+};
 
+const TwitterFeed: React.FC<TwitterFeedProps> = ({ tweets }) => {
   const dividedFeed = chunk(tweets, 4);
 
-  const generateColumn = (data: Array<Tweets[]>) =>
-    data.map((tweet) => <TwitterCard key={tweet.id} id={tweet.id} />);
+  const generateColumn = (tweets: Tweet[]) =>
+    tweets.map((tweet) => <TwitterCard key={tweet.id} id={tweet.id} />);
 
   return (
     <section id="comunidad" className="w-full bg-teal-500 min-h-screen pb-24">

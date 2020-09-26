@@ -12,7 +12,7 @@ export interface Event {
   description: string;
 }
 
-export interface Tweets {
+export interface Tweet {
   id: string;
   text: string;
 }
