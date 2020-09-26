@@ -28,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({ preview }) => {
             Comunidad FEC
           </a>
 
-          <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start items-center">
+          <span className="hidden md:inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start items-center">
             <a
               target="_blank"
               rel="noreferrer"

@@ -5,14 +5,14 @@ const HomeHero: React.FC = () => {
     <>
       <section className={`bg-cover text-gray-700 body-font ${styles.main}`}>
         <div className="w-full bg-opacity-50 bg-gradient-to-t from-black">
-          <div className="flex bg-cover py-12 items-center justify-between flex-wrap container mx-auto">
+          <div className="flex bg-cover py-12 items-center justify-between flex-wrap container mx-auto px-5 lg:px-0">
             <div className="max-w-xl lg:min-w-0 sm:min-w-full md:py-16 py-10 text-shadow">
               <img
                 src="/fec-new.svg"
-                className="pb-2 w-10/12"
+                className="pb-2 w-2/3 lg:w-10/12 mx-auto lg:mx-0"
                 alt="FRONTENDCAFE"
               />
-              <div className="pl-12 text-md">
+              <div className="lg:pl-12 text-md text-center lg:text-left">
                 <p className="text-xl text-green-500 font-medium pb-2">
                   Todos podemos aprender, y todos podemos enseñar.
                 </p>
