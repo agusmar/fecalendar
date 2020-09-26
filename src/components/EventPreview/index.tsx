@@ -52,10 +52,10 @@ const EventPreview: React.FC<EventPreviewProps> = ({ event, past = false }) => {
               {event.category.name}
             </h2>
           </div>
-          <h1 className="title-font text-xl font-medium text-gray-900 mb-2 leading-tight">
+          <h1 className="title-font text-xl font-medium text-gray-900 mb-3 leading-tight">
             {event.title}
           </h1>
-          <p className="title-font font-light text-gray-600 mb-3">
+          <p className="title-font font-light text-gray-700 mb-6">
             {format(new Date(event.date), 'MMM d - HH:mm')} ART (GMT-3)
           </p>
           <div className={`mb-5 ${styles.description}`}>
