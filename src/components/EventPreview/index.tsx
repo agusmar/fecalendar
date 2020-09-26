@@ -35,17 +35,18 @@ const EventPreview: React.FC<EventPreviewProps> = ({ event, past = false }) => {
 
   return (
     <div className="py-8 px-4 lg:w-1/3">
-      <div
-        className="h-full flex items-start rounded overflow-hidden shadow-lg flex-col"
-        style={{ opacity: past ? '.66' : 1 }}
-      >
+      <div className="h-full flex items-start rounded overflow-hidden shadow-lg flex-col">
         <img
           className="w-full"
           src={imageBuilder.image(event.cover.src).width(450).url()}
           alt={event.cover.alt || event.title}
-          style={{ filter: past ? 'grayscale(100%)' : 'none' }}
+          style={{ filter: past ? 'grayscale(66%)' : 'none' }}
         />
-        <div className="flex-grow p-4 flex flex-col">
+        <div
+          className={`flex-grow p-4 flex flex-col ${
+            past ? styles['past-event-text'] : ''
+          }`}
+        >
           <div className="w-full flex justify-between">
             <h2 className="tracking-widest text-xs title-font font-medium text-green-500 mb-1 py-2">
               {event.category.name}
@@ -60,15 +61,26 @@ const EventPreview: React.FC<EventPreviewProps> = ({ event, past = false }) => {
           <div className={`mb-5 ${styles.description}`}>
             <BlockContent blocks={event.description} />
           </div>
-          {!past && (
-            <div className="mt-auto mb-2 pt-4">
+          <div className="mt-auto mb-2 pt-4">
+            {past ? (
+              event.recording && (
+                <a
+                  href={event.recording}
+                  className="bg-red-500 text-white text-sm py-2 px-5 rounded"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Ver grabación
+                </a>
+              )
+            ) : (
               <AddToCalendar
                 event={calendar}
                 buttonLabel="Añadir a mi calendario"
                 displayItemIcons={false}
               />
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </div>

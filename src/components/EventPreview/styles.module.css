@@ -1,3 +1,12 @@
 .description p + p {
   margin-top: 1em;
 }
+
+.past-event-text {
+  opacity: 0.66;
+  transition: opacity 150ms ease-in-out;
+}
+
+.past-event-text:hover {
+  opacity: 1;
+}

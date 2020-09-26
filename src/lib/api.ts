@@ -12,7 +12,8 @@ const eventFields = `
   },
   date,
   description,
-  tags
+  tags,
+  recording
 `;
 
 const getClient = (preview) => (preview ? previewClient : client);
