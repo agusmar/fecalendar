@@ -10,6 +10,7 @@ export interface Event {
   };
   date: string;
   description: string;
+  recording?: string;
 }
 
 export interface Tweet {
