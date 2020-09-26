@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next';
-import { Event, Tweets } from '../lib/types';
+import { Event, Tweet } from '../lib/types';
 import { getAllEvents } from '../lib/api';
 import { getRecentTweets } from '../lib/twitter';
 import Layout from '../components/Layout';
@@ -9,7 +9,7 @@ import TwitterFeed from '../components/TwitterFeed';
 
 interface HomePageProps {
   events: Event[];
-  tweets: Tweets[];
+  tweets: Tweet[];
   preview: boolean;
 }
 
