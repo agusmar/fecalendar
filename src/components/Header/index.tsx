@@ -1,34 +1,69 @@
+import { useRef } from 'react';
+
 interface HeaderProps {
   preview: boolean;
 }
 
 const Header: React.FC<HeaderProps> = ({ preview }) => {
+  const menuBtn = useRef(null);
+  const menu = useRef(null);
+
+  console.log(menuBtn.current);
+  function menuHandler() {
+    menuBtn.current.classList.toggle('open');
+    menu.current.classList.toggle('flex');
+    menu.current.classList.toggle('hidden');
+  }
   return (
-    <header className={`text-gray-700 body-font ${preview ? 'pt-10' : ''}`}>
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <a className="flex title-font items-center text-gray-900 mb-4 md:mb-0">
-          <img
-            src="/logo.svg"
-            className="w-12 h-12 text-white p-2 rounded-full"
-            alt="FRONTENDCAFE"
-          />
-          <span className="ml-1 text-xl text-gray-600 font-semibold">
-            FRONTEND
-          </span>
-          <span className="text-xl text-gray-600 font-normal">CAFE</span>
-        </a>
-        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <a href="#events" className="mr-5 text-gray-600 hover:text-gray-800">
+    <header
+      className={`container mx-auto w-full flex flex-col fixed sm:relative bg-white z-50 ${
+        preview ? 'pt-10' : ''
+      }`}
+    >
+      <nav
+        id="site-menu"
+        className="flex flex-col sm:flex-row w-full justify-between items-center px-4 sm:px-6 py-1 bg-white shadow sm:shadow-none"
+      >
+        <div className="w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center">
+          <a className="flex title-font items-center text-gray-900">
+            <img
+              src="/logo.svg"
+              className="w-12 h-12 text-white p-2 rounded-full"
+              alt="FRONTENDCAFE"
+            />
+            <span className="ml-1 text-xl text-gray-600 font-semibold">
+              FRONTEND
+            </span>
+            <span className="text-xl text-gray-600 font-normal">CAFE</span>
+          </a>
+          <button
+            ref={menuBtn}
+            className="hamburger block sm:hidden focus:outline-none"
+            type="button"
+            onClick={() => menuHandler()}
+          >
+            <span className="hamburger__top-bun"></span>
+            <span className="hamburger__bottom-bun"></span>
+          </button>
+        </div>
+        <div
+          ref={menu}
+          className="w-full sm:w-auto self-end sm:self-center sm:flex flex-col sm:flex-row items-center h-full py-1 pb-4 sm:py-0 sm:pb-0 hidden"
+        >
+          <a
+            href="#events"
+            className="w-full md:w-auto text-center px-5 py-2 text-gray-600 hover:text-gray-800"
+          >
             Eventos
           </a>
           <a
             href="#comunidad"
-            className="mr-5 text-gray-600 hover:text-gray-800"
+            className="w-full md:w-auto text-center px-5 py-2 text-gray-600 hover:text-gray-800"
           >
             Comunidad FEC
           </a>
 
-          <span className="hidden md:inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start items-center">
+          <span className="border-l-2 border-green-400 hidden md:inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start items-center">
             <a
               target="_blank"
               rel="noreferrer"
@@ -88,8 +123,8 @@ const Header: React.FC<HeaderProps> = ({ preview }) => {
               </svg>
             </a>
           </span>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
   );
 };
