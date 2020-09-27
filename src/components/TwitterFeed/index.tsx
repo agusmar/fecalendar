@@ -25,7 +25,7 @@ const TwitterFeed: React.FC<TwitterFeedProps> = ({ tweets }) => {
     <section id="comunidad" className="w-full bg-teal-500 min-h-screen pb-24">
       <div className="container px-5 py-16 mx-auto">
         <h1 className="text-3xl pb-12 text-white">Comunidad FEC</h1>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center px-5 lg:px-0">
+        <div className="block md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center px-5 lg:px-0">
           <div>{generateColumn(dividedFeed[0])}</div>
           <div>{generateColumn(dividedFeed[1])}</div>
           <div>{generateColumn(dividedFeed[2])}</div>

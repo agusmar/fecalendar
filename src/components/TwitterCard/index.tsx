@@ -13,7 +13,6 @@ const TwitterCard: React.FC<TwitterCardProps> = ({ id }) => {
         placeholder={<SkeletonTwitterCard />}
         options={{
           conversation: 'none',
-          width: '500',
         }}
       />
     </div>
