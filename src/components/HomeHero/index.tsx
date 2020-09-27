@@ -21,9 +21,15 @@ const HomeHero: React.FC = () => {
                   creamos un espacio para aprender en compañía de otres que a
                   veces saben más, y a veces saben menos.
                 </p>
-                <button className="bg-secondary hover:bg-secondarydark text-white font-medium py-2 px-4 rounded mt-5">
-                  ¡Sumate a nuestro Discord!
-                </button>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://discord.gg/3GC6TJd"
+                >
+                  <button className="bg-secondary hover:bg-secondarydark text-white font-medium py-2 px-4 rounded mt-5">
+                    ¡Sumate a nuestro Discord!
+                  </button>
+                </a>
               </div>
             </div>
             <iframe
