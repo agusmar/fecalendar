@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ preview }) => {
         className="flex flex-col sm:flex-row w-full justify-between items-center px-4 sm:px-6 py-1 bg-white shadow sm:shadow-none"
       >
         <div className="w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center">
-          <a className="flex title-font items-center text-gray-900">
+          <a href="/" className="flex title-font items-center text-gray-900">
             <img
               src="/logo.svg"
               className="w-12 h-12 text-white p-2 rounded-full"
