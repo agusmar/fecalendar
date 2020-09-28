@@ -1,10 +1,23 @@
+.description a {
+  color: #00c39d;
+  text-decoration: underline;
+}
+
+.description ul {
+  list-style: disc;
+  padding-left: 1rem;
+}
+
+.description li + li {
+  margin-top: 0.33em;
+}
+
 .description p + p {
   margin-top: 1em;
 }
 
-.description a {
-  color: #00c39d;
-  text-decoration: underline;
+.description p + ul {
+  margin-top: 1em;
 }
 
 .past-event-text {
