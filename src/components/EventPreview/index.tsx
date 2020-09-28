@@ -44,7 +44,7 @@ const EventPreview: React.FC<EventPreviewProps> = ({ event, past = false }) => {
         />
         <div
           className={`flex-grow p-4 flex flex-col ${
-            past ? styles['past-event-text'] : ''
+            past && !event.recording ? styles['past-event-text'] : ''
           }`}
         >
           <div className="w-full flex justify-between">
