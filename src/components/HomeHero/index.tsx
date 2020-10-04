@@ -17,9 +17,7 @@ const HomeHero: React.FC = () => {
                   Todos podemos aprender, y todos podemos enseñar.
                 </p>
                 <p className="text-gray-400 leading-relaxed text-lg">
-                  Entrar al mundo de la tecnología puede ser difícil, entonces
-                  creamos un espacio para aprender en compañía de otres que a
-                  veces saben más, y a veces saben menos.
+                  Somos una comunidad de personas interesadas en tecnología y ciencias informáticas en donde charlamos sobre lenguajes de programación, diseño web, infraestructura, compartimos dudas, preguntamos y respondemos.
                 </p>
                 <a
                   target="_blank"
