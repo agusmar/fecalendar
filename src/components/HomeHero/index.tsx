@@ -14,8 +14,7 @@ const HomeHero: React.FC = () => {
               />
               <div className="lg:pl-12 text-md text-center lg:text-left">
                 <p className="text-xl text-green-500 font-medium pb-2">
-                  Todos podemos aprender, y todos podemos enseñar.
-                </p>
+                  Podés aprender y podés enseñar ~</p>
                 <p className="text-gray-400 leading-relaxed text-lg">
                   Somos una comunidad de personas interesadas en tecnología y ciencias informáticas en donde charlamos sobre lenguajes de programación, diseño web, infraestructura, compartimos dudas, preguntamos y respondemos.
                 </p>
