@@ -28,9 +28,12 @@ const EventList: React.FC<EventListProps> = ({ events }) => {
           Eventos Anteriores
         </h1>
         <div className="flex flex-wrap -mx-4 -my-8">
-          {pastEvents(events).map((event) => (
-            <EventPreview key={event.slug} event={event} past={true} />
-          ))}
+          {pastEvents(events).map(
+            (event) =>
+              event.recording && (
+                <EventPreview key={event.slug} event={event} past={true} />
+              ),
+          )}
         </div>
       </div>
       <Divider />
