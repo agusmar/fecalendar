@@ -7,13 +7,13 @@ import HomeHero from '../components/HomeHero';
 import EventList from '../components/EventList';
 import TwitterFeed from '../components/TwitterFeed';
 
-interface HomePageProps {
+export interface CalendarPageProps {
   events: Event[];
   tweets: Tweet[];
   preview: boolean;
 }
 
-const HomePage: React.FC<HomePageProps> = ({ events, preview, tweets }) => {
+const CalendarPage: React.FC<CalendarPageProps> = ({ events, preview, tweets }) => {
   return (
     <Layout preview={preview}>
       <HomeHero />
@@ -32,4 +32,4 @@ export const getStaticProps: GetStaticProps = async ({ preview = false }) => {
   };
 };
 
-export default HomePage;
+export default CalendarPage;

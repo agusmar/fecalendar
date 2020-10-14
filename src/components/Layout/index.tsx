@@ -4,10 +4,10 @@ import Footer from '../Footer';
 import PreviewBanner from '../PreviewBanner';
 
 interface LayoutProps {
-  preview: boolean;
+  preview?: boolean;
 }
 
-const Layout: React.FC<LayoutProps> = ({ preview, children }) => {
+const Layout: React.FC<LayoutProps> = ({ preview = false, children }) => {
   return (
     <>
       <Head>
